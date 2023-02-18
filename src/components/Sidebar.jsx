@@ -183,6 +183,7 @@ const Sidebar = ({user, drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobil
                         </List>
                     </Box>
 
+{/* comment 👇 */}
                     <Box position='absolute' bottom='2rem'>
                         <Divider />
                         <FlexBetween textTransform='none' gap='1rem' m='1.5rem 2rem 0 3rem'>
@@ -215,7 +216,9 @@ const Sidebar = ({user, drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobil
                             />
                         </FlexBetween>
                     </Box>
-                    <Box position='absolute' bottom='2rem'>
+
+                    
+                    {/* <Box position='absolute' bottom='2rem'>
                         <Divider />
                         <FlexBetween textTransform='none' gap='1rem' m='1.5rem 2rem 0 3rem'>
                             <Box
@@ -242,7 +245,9 @@ const Sidebar = ({user, drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobil
                                 <SettingsOutlined sx={{ color: theme.palette.secondary[300], fontSize: '25px' }} />
                             </Box>
                         </FlexBetween>
-                    </Box>
+                    </Box> */}
+{/* comment 👆 */}
+
                 </Drawer>
             )}
         </Box>

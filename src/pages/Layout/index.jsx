@@ -26,9 +26,10 @@ export const Layout = () => {
             />
             <Box flexGrow={1}>
 
-            <Navbar 
+             <Navbar
             user={data || {}} 
-            isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
+            isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} /> 
+
             <Outlet />
             </Box>
         </Box>

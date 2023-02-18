@@ -11,13 +11,13 @@ import FlexBetween from './FlexBetween';
 import { useDispatch } from 'react-redux';
 import { setMode } from '../state';
 import profile from '../assets/profile.jpg';
-import { useTheme, AppBar, Toolbar, IconButton, InputBase, Button, Menu } from '@mui/material';
+import { useTheme, AppBar, Toolbar,Box, Typography, IconButton, InputBase, Button, Menu, MenuItem } from '@mui/material';
 
-export default function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
+const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
     const dispatch = useDispatch();
     const theme = useTheme();
     const [anchorEl, setAnchorEl] = useState(null);
-    const [isOpen, setIsOpen] = Boolean(anchorEl);
+    const isOpen = Boolean(anchorEl);
 
     const handleClick = (event) => setAnchorEl(event.currentTarget);
     const handleClose = () => setAnchorEl(null);
@@ -109,3 +109,5 @@ export default function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
         </AppBar>
     );
 }
+
+export default Navbar;

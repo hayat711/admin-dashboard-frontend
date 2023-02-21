@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ResponsiveChoropleth } from "@nivo/geo";
 import { useGetGeographyQuery } from '../../state/api';
 import Header from '../../components/Header';
+import { geoData } from '../../state/geoData';
 
 const Geography = () => {
     const theme = useTheme();

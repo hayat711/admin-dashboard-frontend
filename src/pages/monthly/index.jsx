@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { Box, useTheme } from '@mui/material';
-import Header from 'components/Header';
 import { ResponsiveLine } from '@nivo/line';
-import { useGetSalesQuery } from 'state/api';
+import Header from '../../components/Header';
+import { useGetSalesQuery } from '../../state/api';
 
 const Monthly = () => {
     const { data } = useGetSalesQuery();
@@ -34,7 +34,7 @@ const Monthly = () => {
 
     return (
         <Box m='1.5rem 2.5rem'>
-            <Header title='MONTHLY SALES' subtitle='Chart of monthlysales' />
+            <Header title='MONTHLY SALES' subtitle='Chart of monthly sales' />
             <Box height='75vh'>
                 {data ? (
                     <ResponsiveLine

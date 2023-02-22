@@ -13,6 +13,9 @@ import Geography from './pages/geography';
 import Overview from './pages/overview';
 import Daily from './pages/daily';
 import Monthly from './pages/monthly';
+import Breakdown from './pages/breakdown';
+import Admin from './pages/admin';
+import Performance from './pages/performance';
 
 function App() {
     const mode = useSelector((state) => state.global.mode);
@@ -24,17 +27,19 @@ function App() {
                 <ThemeProvider theme={theme}>
                     <CssBaseline />
                     <Routes>
-                        <Route element={<Layout /> } >
-                            <Route path='/' element={<Navigate to='/dashboard' replace /> } />
+                        <Route element={<Layout />}>
+                            <Route path='/' element={<Navigate to='/dashboard' replace />} />
                             <Route path='/dashboard' element={<Dashboard />} />
-                            <Route path='/products' element={<Products /> } />
-                            <Route path='/customers' element={<Customer /> } />
+                            <Route path='/products' element={<Products />} />
+                            <Route path='/customers' element={<Customer />} />
                             <Route path='/transactions' element={<Transaction />} />
                             <Route path='/geography' element={<Geography />} />
                             <Route path='/overview' element={<Overview />} />
                             <Route path='/daily' element={<Daily />} />
                             <Route path='/monthly' element={<Monthly />} />
-                        
+                            <Route path='/breakdown' element={<Breakdown />} />
+                            <Route path='/admin' element={<Admin />} />
+                            <Route path='/performance' element={<performance />} />
                         </Route>
                     </Routes>
                 </ThemeProvider>

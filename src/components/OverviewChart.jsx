@@ -16,29 +16,30 @@ const OverviewChart = ({ isDashboard = false, view }) => {
             color: theme.palette.secondary.main,
             data: [],
         };
-
         const totalUnitsLine = {
             id: 'totalUnits',
             color: theme.palette.secondary[600],
             data: [],
         };
+
         Object.values(monthlyData).reduce(
             (acc, { month, totalSales, totalUnits }) => {
                 const curSales = acc.sales + totalSales;
                 const curUnits = acc.units + totalUnits;
 
                 totalSalesLine.data = [...totalSalesLine.data, { x: month, y: curSales }];
-                totalUnitsLine.data = [...totalUnitsLine, { x: month, y: curUnits }];
+                totalUnitsLine.data = [...totalUnitsLine.data, { x: month, y: curUnits }];
 
                 return { sales: curSales, units: curUnits };
             },
             { sales: 0, units: 0 }
         );
 
-        return [[totalSalesLine], [totalUnitsLine]]
+        return [[totalSalesLine], [totalUnitsLine]];
     }, [data]);
 
     if (!data || isLoading) return <p>Loading...</p>;
+    
     return (
         <ResponsiveLine
             data={view === 'sales' ? totalSalesLine : totalUnitsLine}
